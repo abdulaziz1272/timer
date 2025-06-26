@@ -43,6 +43,7 @@ body{
     flex-direction: column;
     height: 160px;
     margin-top: 50px;
+    width: 500px;
 }
 .displayer{
     display: flex;
@@ -54,13 +55,24 @@ body{
 }
 .btn-holder{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 11px;
 }
 .btn-holder button{
  width: 120px;
  height: 40px;
  font-size: 26px;
+ border: none;
+ outline: none;
+ cursor: pointer;
 }
+.btn-holder button:hover{
+    background-color: #bebebe;
+}
+.btn-holder button:active{
+    transform: scale(0.98);
+}
+
 .timer-notes{
     display: flex;
     flex-direction: column;
@@ -77,10 +89,10 @@ body{
     font-size: 30px;
     position: relative;
 }
-.timer-notes li span{
+.note-clear{
     position: absolute;
-    right: 15px;
-    font-size: 24px;
+    right: 5px;
+    font-size: 36px;
     color: red;
     width: 40px;
     height: 40px;
@@ -88,9 +100,10 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
+    transform: rotate(45deg);
 }
-.timer-notes li span:hover{
+.note-clear:hover{
     background-color: #e8e8e8;
 }

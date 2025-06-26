@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Timer</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -14,30 +14,40 @@
 <body>
     <div class="container">
         <div class="realTime">
-            <span>00</span>
+            <span class="real-hrs">00</span>
             <span>:</span>
-            <span>00</span>
+            <span class="real-min">00</span>
             <span>:</span>
-            <span>00</span>
+            <span class="real-sec">00</span>
         </div>
         <div class="timer-wrapper">
             <div class="displayer">
-                <span>00</span>
+                <span class="timer-hrs">00</span>
                 <span>:</span>
-                <span>00</span>
+                <span class="timer-min">00</span>
                 <span>:</span>
-                <span>00</span>
+                <span class="timer-sec">00</span>
                 <span>:</span>
-                <span>00</span>
+                <span class="timer-mil">00</span>
             </div>
             <div class="btn-holder">
-                <button class="startBtn">Start</button>
-                <button class="noteBtn"><i class="fa-solid fa-flag"></i></button>
-                <button class="resetBtn">Reset</button>
+                <button class="startBtn" onclick="checkActive()">Start</button>
+                <button class="noteBtn" onclick="addNote()"><i class="fa-solid fa-flag"></i></button>
+                <button class="resetBtn" onclick="timerReset()">Reset</button>
             </div>
         </div>
         <ul class="timer-notes">
-            <li>00:05:56:23 <span>x</span></li>
+            <li>00:05:56:23 <span class="note-clear">+</span></li>
+            <li>
+                <span class="noteHrs">00</span>
+                <span>:</span>
+                <span class="noteMin">00</span>
+                <span>:</span>
+                <span class="noteSec">00</span>
+                <span>:</span>
+                <span class="noteMil">00</span>
+                <span class="note-clear">+</span>
+            </li>
         </ul>
     </div>
     <script src="index.js"></script>
