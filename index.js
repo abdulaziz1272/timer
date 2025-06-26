@@ -135,7 +135,7 @@ function timerReset() {
     replicaSec = 0;
     timerSec.innerHTML = "00";
     timerMin = 0;
-    interMin.innerHTML = "00";
+    interMil.innerHTML = "00";
     replicaHrs = 0;
     timerHrs.innerHTML = "00"
 };
